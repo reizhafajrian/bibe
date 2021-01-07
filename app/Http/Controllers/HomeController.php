@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MenuModel;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+      
+        $titleBar="Dashboard";
+        return view("index",compact("titleBar"));
     }
 }
