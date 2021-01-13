@@ -24,23 +24,9 @@ $data=Auth::user()
     <ul class="c-header-nav ml-auto mr-4">
      
       <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <div class="c-avatar">{{$data->email}}</div>
+          <div class="c-avatar">Account</div>
         </a>
-        <div class="dropdown-menu dropdown-menu-right pt-0">
-          
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-            <svg class="c-icon mr-2">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-            </svg> Lock Account</a><a class="dropdown-item" href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();"  >
-            <svg class="c-icon mr-2">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-            </svg> Logout</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-  
-        </div>
+
       </li>
     </ul>
   

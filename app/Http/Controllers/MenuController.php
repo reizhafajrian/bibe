@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class MenuController extends Controller
 {
     public function index(){
-        $data=new MenuModel();
-        $collection=$data->all();
+        // $data=new MenuModel();
+        // $collection=$data->all();
         $titleBar="Menu";
-        return view("menu",compact('titleBar','collection'));
+        return view("menu",compact('titleBar'));
     }
 }
