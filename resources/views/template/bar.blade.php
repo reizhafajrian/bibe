@@ -69,6 +69,7 @@
             <li class="c-sidebar-nav-title">Admin</li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
                     <svg class="c-sidebar-nav-icon">
+<<<<<<< HEAD
                         <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-speedometer') }}">
                         </use>
                     </svg> Dashboard<span class="badge badge-info"></span></a>
@@ -83,12 +84,29 @@
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-storage') }}">
                         </use>
+=======
+                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
+                    </svg> Dashboard<span class="badge badge-info"></span></a>
+            </li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-fastfood"></use>
+                    </svg> Menu<span class="badge badge-info"></span></a>
+            </li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-storage"></use>
+>>>>>>> origin/master
                     </svg> Inventory<span class="badge badge-info"></span></a>
             </li>
             <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
                     class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
+<<<<<<< HEAD
                         <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-dollar') }}"></use>
+=======
+                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-dollar"></use>
+>>>>>>> origin/master
                     </svg> Reporting<span class="badge badge-info"></span></a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span
@@ -101,14 +119,23 @@
             <li class="c-sidebar-nav-title">cashier</li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
                     <svg class="c-sidebar-nav-icon">
+<<<<<<< HEAD
                         <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-fastfood') }}">
                         </use>
+=======
+                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-fastfood"></use>
+>>>>>>> origin/master
                     </svg>Menu</a>
             </li>
         </ul>
         <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
             data-class="c-sidebar-minimized"></button>
     </div>
+<<<<<<< HEAD
+=======
+    @yield("content")
+
+>>>>>>> origin/master
 
     @yield("content")
 
