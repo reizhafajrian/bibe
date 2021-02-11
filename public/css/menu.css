@@ -83,6 +83,12 @@
     justify-content: space-around;
     margin: 0px auto;
 }
+.top{
+    display: flex;
+    justify-content: space-between;
+    position: relative !important;
+    margin: 0px !important;
+}
 
 .menu-info {
     background-color: white;

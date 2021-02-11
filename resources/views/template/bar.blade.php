@@ -7,7 +7,8 @@
 * Licensed under MIT (https://coreui.io/license)
 -->
 <html lang="en">
-  <head>
+
+<head>
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,57 +36,91 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Main styles for this application-->
-    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Bootstrap ID
-      gtag('config', 'UA-118965717-5');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+
     </script>
-  </head>
-  <body @yield("bodyclass")>
-  <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-      <div class="c-sidebar-brand d-lg-down-none">
-        <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-          <use xlink:href="assets/brand/coreui.svg#full"></use>
-        </svg>
-        <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
-          <use xlink:href="assets/brand/coreui.svg#signet"></use>
-        </svg>
-      </div>
-      <ul class="c-sidebar-nav">
-      <li class="c-sidebar-nav-title">Admin</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
-            <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-            </svg> Dashboard<span class="badge badge-info"></span></a></li>
-        <li class="c-sidebar-nav-title">cashier</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
-            <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
-            </svg>Menu</a></li>
-       
-      </ul>
-      <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
-    </div>
-  @yield("content")
-    
+</head>
 
+<body @yield("bodyclass")>
+    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+        <div class="c-sidebar-brand d-lg-down-none">
+            <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
+                <use xlink:href="assets/brand/coreui.svg#full"></use>
+            </svg>
+            <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
+                <use xlink:href="assets/brand/coreui.svg#signet"></use>
+            </svg>
+        </div>
+
+        <ul class="c-sidebar-nav">
+            <li class="c-sidebar-nav-title">Admin</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-speedometer') }}">
+                        </use>
+                    </svg> Dashboard<span class="badge badge-info"></span></a>
+            </li>
+            <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-fastfood') }}">
+                        </use>
+                    </svg> Menu<span class="badge badge-info"></span></a>
+            </li> -->
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/inventory">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-storage') }}">
+                        </use>
+                    </svg> Inventory<span class="badge badge-info"></span></a>
+            </li>
+            <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
+                    class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-dollar') }}"></use>
+                    </svg> Reporting<span class="badge badge-info"></span></a>
+                <ul class="c-sidebar-nav-dropdown-items">
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span
+                                class="c-sidebar-nav-icon"></span> Income</a></li>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html"><span
+                                class="c-sidebar-nav-icon"></span> Outcome</a></li>
+                </ul>
+            </li>
+
+            <li class="c-sidebar-nav-title">cashier</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-fastfood') }}">
+                        </use>
+                    </svg>Menu</a>
+            </li>
+        </ul>
+        <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+            data-class="c-sidebar-minimized"></button>
+    </div>
+
+    @yield("content")
+
+    @yield('aside')
 
     <!-- CoreUI and necessary plugins-->
-    <script src="dist/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="{{ asset('dist/vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>
     <!--[if IE]><!-->
-    <script src="dist/vendors/@coreui/icons/js/svgxuse.min.js"></script>
+    <script src="{{ asset('dist/vendors/@coreui/icons/js/svgxuse.min.js') }}"></script>
     <!--<![endif]-->
 
 
-  </body>
+</body>
+
 </html>

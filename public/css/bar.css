@@ -1,3 +1,14 @@
 .c-avatar {
     width: 100%;
 }
+html:not([dir="rtl"]) .right:not(.c-sidebar-right){
+    right: 0 !important;
+}
+html:not([dir="rtl"]) .right:not(.c-sidebar-right), html:not([dir="rtl"]) .right:not(.c-sidebar-right){
+        margin-right: 0 !important;
+    }
+    @media (min-width: 992px){
+    html:not([dir="rtl"]) .right:not(.c-sidebar-right) {
+        right: 0 !important;
+    }
+}

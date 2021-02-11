@@ -26,6 +26,9 @@ Route::get('/color', function () {
 Route::get('/chart', function () {
     return view('charts');
 });
+
+Route::get("/inventory", "InventoryController@index");
+Route::get("/inventory/create", "InventoryController@create");
 // Route::get('/', function () {
 //     return view('');
 // });

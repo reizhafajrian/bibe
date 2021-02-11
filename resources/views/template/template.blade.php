@@ -7,7 +7,8 @@
 * Licensed under MIT (https://coreui.io/license)
 -->
 <html lang="en">
-  <head>
+
+<head>
     <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,26 +35,30 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Main styles for this application-->
-    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Bootstrap ID
-      gtag('config', 'UA-118965717-5');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
     </script>
-  </head>
-  <body @yield("bodyclass")>
-  @yield("content")
+</head>
+
+<body @yield("bodyclass")>
+    @yield("content")
 
 
+
+
+    @yield('aside')
 
     <!-- CoreUI and necessary plugins-->
     <script src="dist/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
@@ -62,5 +67,12 @@
     <!--<![endif]-->
 
 
-  </body>
+
+    
+
+
+ 
+ 
+</body>
+
 </html>
