@@ -119,23 +119,14 @@
             <li class="c-sidebar-nav-title">cashier</li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
                     <svg class="c-sidebar-nav-icon">
-<<<<<<< HEAD
                         <use xlink:href="{{ asset('node_modules/@coreui/icons/sprites/free.svg#cil-fastfood') }}">
                         </use>
-=======
-                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-fastfood"></use>
->>>>>>> origin/master
                     </svg>Menu</a>
             </li>
         </ul>
         <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
             data-class="c-sidebar-minimized"></button>
     </div>
-<<<<<<< HEAD
-=======
-    @yield("content")
-
->>>>>>> origin/master
 
     @yield("content")
 
